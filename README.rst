@@ -37,7 +37,8 @@ Note that both of these APIs are on the one hand part of Sun's official tools fo
 other hand are not part of a "standard" specification - e.g. not an official part of the JDK. The package names
 belong to the com.sun namespace which means in principle, they could be modified at any time, for any reason, between
 JVM releases. This is, I think, unlikely, but possible, so if you are using veemon be aware that if you aren't
-using JMX (which has a standard) your code may break if Sun decides to change APIs.
+using JMX (which has a standard) your code may break if Sun decides to change APIs. I've been developing and 
+testing these using the Sun JDK 1.6 release (b18).
 
 These APIs--jvmstat and Attach--seem pretty well undocumented, outside of the class docs themselves. However,
 they are both used within VisualVM, a graphical (desktop app) monitoring and management tool that ships with
