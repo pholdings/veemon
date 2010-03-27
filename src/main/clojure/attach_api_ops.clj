@@ -36,5 +36,4 @@
       (let [sprops (.getSystemProperties vm)
             cprops {}]
         (for [k (keys sprops)] (assoc cprops k (.getProperty sprops k)))))
-; (map #(.getValue (map #(.getKey %) sprops))
 
