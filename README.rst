@@ -49,5 +49,7 @@ both jvmstat and attach. VisualVM is available on http://visualvm.dev.java.net.
 Using veemon
 ------------
 
+You will need ``tools.jar`` from the JDK in your classpath to use veemon.
+
 Take a look at http://github.com/pholdings/veemon/blob/master/src/main/clojure/veemon/sample.clj
   
