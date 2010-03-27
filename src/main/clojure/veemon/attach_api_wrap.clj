@@ -1,4 +1,4 @@
-(ns attach-api-ops
+(ns veemon.attach-api-wrap
     "Convenience library around the Java Attach API, a private API from Sun for connecting to and
     working with Sun Java Virtual Machines, documented at http://java.sun.com/javase/6/docs/jdk/api/attach/spec/.
     As a private API, it may change at Sun's pleasure (it is not part of an open, community specification)."

@@ -1,4 +1,4 @@
-(ns vmstat-ops
+(ns veemon.jvm-stat-wrap
     "Provides wrapper functions for working with Sun's jvmstat API; jvmstat is not a public API, which means Sun
     can change it at any time, for any reason, between any two releases. The jvmstat API allows you to discover
     JVMs running on a given host, connect to them, and ask them for information about their internal state, e.g.
@@ -93,6 +93,6 @@
 (defn desc-value-for
       "Returns the value, as string, in the form '<base name>:<name>=<value>' for an instrument named iname for a
       monitored vm mvm; if you already have a monitored value, pass that in instead"
-      ([mvm iname] (desc-value-for (find-value mvm iname)))
+      ([mvm iname] (desc-value-for (instrument-value mvm iname)))
       ([mval] (format "%s:%s=%s" (.getBaseName mval) (.getName mval) (string-value-for mval))))
 
