@@ -28,15 +28,10 @@
       ([] (vmhost "localhost"))
       ([host-uri] (MonitoredHost/getMonitoredHost host-uri)))
 
-(defn local-vmhost 
-      "Returns the monitored host for local vms"
-      []
-      (vmhost))
-
 (defn vm-proc-ids-for 
       "Returns seq of process id of vms on a monitored host; assume these are currently active vms"
       [vmhost] 
-      (.activeVms vmhost))
+      (seq (.activeVms vmhost)))
 
 (defn vmid 
       "Returns a new VmIdentifier for a given vm proc id"
