@@ -7,6 +7,15 @@ you can request that a JVM load a JAR file containing Java agents, in particular
 you can connect to and run JMX requests. The purpose of all these APIs is to monitor and manage JVMs; I'm 
 focused on the monitoring part.
 
+veemon is the pretty much the first Clojure code I've written and it's pretty crude and will be improved over time.
+My own interest is in being able to write small bits of Clojure to easily monitor VMs I'm working with.
+
+
+Status
+------
+
+First code dump. Very crude. Clojure newbie.
+
 
 The Serviceability APIs
 -----------------------
@@ -30,13 +39,14 @@ belong to the com.sun namespace which means in principle, they could be modified
 JVM releases. This is, I think, unlikely, but possible, so if you are using veemon be aware that if you aren't
 using JMX (which has a standard) your code may break if Sun decides to change APIs.
 
+These APIs--jvmstat and Attach--seem pretty well undocumented, outside of the class docs themselves. However,
+they are both used within VisualVM, a graphical (desktop app) monitoring and management tool that ships with
+Sun's JRE. VisualVM is open source, so if you download the sources you'll see examples of how to use
+both jvmstat and attach. VisualVM is available on http://visualvm.dev.java.net.
+
 
 Using veemon
 ------------
 
-veemon is the pretty much the first Clojure code I've written and it's pretty crude and will be improved over time.
-My own interest is in being able to write small bits of Clojure to easily monitor VMs I'm working with.
-
-Rough notes::
-
+Take a look at ``src/main/clojure/veemon/sample.clj``.
   

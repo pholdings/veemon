@@ -1,0 +1,1 @@
+(ns veemon.sample)
